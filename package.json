@@ -1,0 +1,32 @@
+{
+    "name": "e-comics",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "node server",
+        "start": "nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dmevola/e-comics.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dmevola/e-comics/issues"
+    },
+    "homepage": "https://github.com/dmevola/e-comics#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    },
+    "dependencies": {
+        "apollo-server": "^3.6.7",
+        "bcryptjs": "^2.4.3",
+        "graphql": "^16.4.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.1",
+        "react-router-dom": "^6.3.0"
+    }
+}
