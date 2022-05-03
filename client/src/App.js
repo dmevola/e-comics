@@ -6,6 +6,8 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 import Login from "./pages/Login/Login";
 import Header from "./component/Header/Header";
+import Home from "./pages/Home/Home";
+import Checkout from "./pages/Checkout/Checkout";
 
 const httplink = createHttpLink({
   uri: 'http://localhost:3003/graphql'
@@ -33,10 +35,12 @@ function App() {
       <div className="app ">
         
         <Routes>
-          <Route path="/signup" element={<><SignUp/></>}/>
-          <Route path="/login" element={<><Login/></>}/>
-          <Route path="*" element={<><Header/></>}/>     
-        </Routes>
+            <Route path="/checkout" element={<><Checkout/></>}/>   
+            <Route path="/home" element={<><Header/><Home/></>}/>
+            <Route path="/signup" element={<><SignUp/></>}/>
+            <Route path="/login" element={<><Login/></>}/>
+            <Route path="*" element={<><Header/><Home/></>}/>     
+          </Routes>
       </div>
     </Router>
     </ApolloProvider>
