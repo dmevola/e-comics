@@ -25,7 +25,14 @@ const typeDefs = gql `
 
   type Item {
     _id: ID
-    itemText: String
+    itemPublisher: String
+    itemTitle: String
+    itemIssueTitle: String
+    itemIssueNumber: tring
+    itemDescription: String
+    itemCondition: String
+    itemPrice: String
+    itemImage: String
     createdAt: String
     username: String
     reactionCount: Int
