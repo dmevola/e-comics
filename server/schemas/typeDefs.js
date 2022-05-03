@@ -28,7 +28,7 @@ const typeDefs = gql `
     itemPublisher: String
     itemTitle: String
     itemIssueTitle: String
-    itemIssueNumber: tring
+    itemIssueNumber: String
     itemDescription: String
     itemCondition: String
     itemPrice: String
