@@ -25,7 +25,14 @@ const typeDefs = gql `
 
   type Item {
     _id: ID
-    itemText: String
+    itemPublisher: String
+    itemTitle: String
+    itemIssueTitle: String
+    itemIssueNumber: String
+    itemDescription: String
+    itemCondition: String
+    itemPrice: String
+    itemImage: String
     createdAt: String
     username: String
     reactionCount: Int
@@ -35,7 +42,7 @@ const typeDefs = gql `
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addItem(itemText: String!): Item
+    addItem(itemPublisher: String!, itemTitle: String!, itemIssueTitle: String!, itemIssueNumber: String!, itemDescription: String, itemCondition: String, itemPrice: String, itemImage: String, username: String): Item
     addReaction(itemId: ID!, reactionBody: String!): Item
     addFriend(friendId: ID!): User
   }
