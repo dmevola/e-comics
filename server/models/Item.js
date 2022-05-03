@@ -4,7 +4,7 @@ const dateFormat = require('../utils/dateFormat');
 const reactionSchema = require('./Reaction');
 
 const itemSchema = new Schema({
-    itemPublisher: { //****NEED TO MAKE THIS A LOOKUP */ 
+    itemPublisher: { //****List/Validation managed in UI */ 
         // ie. DC, Marvel, Etc
         type: String,
         required: "You cant leave the publisher empty!",
@@ -30,16 +30,17 @@ const itemSchema = new Schema({
         required: "You cant leave the item description empty!",
         minlength: 1
     },
-    itemCondition: { //****NEED A LOOKUP */
+    itemCondition: { //****List managed in UI */
         //ie. (Poor, Fair, Good, Very Fine, Mint)
         type: String,
         required: "You cant leave the item condition empty!",
         minlength: 1
     },
-    itemPrice: { //****SET TO DECIMAL */
-        type: String,
-        required: "You cant leave the item empty!",
-        minlength: 1
+    itemPrice: { //****SET TO DECIMAL; blank == not for sale*/
+        type: Number,
+        type: Number,
+        get: v => (v/100).toFixed(2),
+        set: v => v*100
     },
     itemImage: { //Gets set on upload
         type: String
