@@ -3,14 +3,15 @@ import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
+import { useStateValue } from '../../StateProvider';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 
 export default function Header() {
+    const [{basket,user},dispatch] = useStateValue();
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
       };
-    const basket = "1"
     return (
         <div className="header">
            <Link underline="none" to="/">
@@ -62,6 +63,7 @@ export default function Header() {
                 </Link>    
                 <div className="header__optionBasket">
                     <Link to="/checkout">
+                        
                         <ShoppingBasketIcon className="ShoppingBasketIcon"/>  
                     </Link>
                     <span className="heade__optionLineTwo Header__basketCount">{basket?.length}</span>
