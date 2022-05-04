@@ -1,0 +1,32 @@
+[
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "The Dark Knight",
+    "itemIssueTitle":  "The Broken Bat: Test 1",
+    "itemIssueNumber": "23",
+    "itemDescription": "This is a great story",
+    "itemCondition": "Mint",
+    "itemPrice": 99.99,
+    "username": "AJ"
+  },
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "The Dark Knight",
+    "itemIssueTitle":  "The Broken Bat: Test 2",
+    "itemIssueNumber": "24",
+    "itemDescription": "This is a grand story",
+    "itemCondition": "Very Fine",
+    "itemPrice": 19.99,
+    "username": "Dan"
+  },
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "The Dark Knight",
+    "itemIssueTitle":  "The Broken Bat: Test 3",
+    "itemIssueNumber": "25",
+    "itemDescription": "This is an EPIC story",
+    "itemCondition": "Good",
+    "itemPrice": 9.99,
+    "username": "Nima"
+  }
+]
