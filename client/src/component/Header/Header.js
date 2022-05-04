@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { useStateValue } from '../../StateProvider';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
+import { useQuery } from '@apollo/client';
+import { QUERY_ME_BASIC } from '../../utils/queries';
 
 export default function Header() {
     const [{basket,user},dispatch] = useStateValue();
+    const { data:userData} = useQuery(QUERY_ME_BASIC)
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
@@ -19,9 +22,9 @@ export default function Header() {
            </Link>
            <div className="header__search">
                 <input className="header__searchInput" type="text"/>
-                <SearchIcon className="header__searchIcon"/>   
-                
-                
+                <SearchIcon className="header__searchIcon"/> 
+                {/* {userData.me.username} */}
+                 
             </div>
             <div className="header__nav">
                 <Link to={!Auth.loggedIn() && '/login'}>
@@ -62,10 +65,17 @@ export default function Header() {
                     </div>
                 </Link>    
                 <div className="header__optionBasket">
+                    
+                    {localStorage.getItem('id_token') ?
                     <Link to="/checkout">
                         
                         <ShoppingBasketIcon className="ShoppingBasketIcon"/>  
                     </Link>
+                    : <Link to="/login">
+                        
+                    <ShoppingBasketIcon className="ShoppingBasketIcon"/>  
+                </Link>
+                }
                     <span className="heade__optionLineTwo Header__basketCount">{basket?.length}</span>
                 </div>
                 
