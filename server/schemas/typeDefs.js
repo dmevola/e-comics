@@ -13,7 +13,7 @@ const typeDefs = gql `
     users: [User]
     user(username: String!): User
     items: [Item]
-    itemsByUser(username: String): [Item]
+    itemsByUser(username: String!): [Item]
     item(_id: ID!): Item
   }
 

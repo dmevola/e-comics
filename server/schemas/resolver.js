@@ -28,6 +28,11 @@ const resolvers = {
             const params = username ? { username } : {};
             return Item.find(params).sort({ createdAt: -1 });
         },
+        
+        itemsByUser: async(parent, { username }) => {
+            const params = username ? { username } : {};
+            return Item.find(params).sort({ createdAt: -1 });
+        },
 
         item: async(parent, { _id }) => {
             return Item.findOne({ _id });
