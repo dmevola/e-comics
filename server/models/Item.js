@@ -45,6 +45,10 @@ const itemSchema = new Schema({
     itemImage: { //Gets set on upload
         type: String
     },
+    itemStatus: { //For Sale, Private Collection, Sold
+        type: String,
+        default: "Private Collection"
+    },
     createdAt: {
         type: Date,
         default: Date.now,
