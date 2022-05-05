@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+
 export const QUERY_ITEM = gql`
 query items($id: ID!) {
     item(_id: $id) {
@@ -16,3 +17,22 @@ query items($id: ID!) {
     }
 }
 `
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+    }
+  }
+`;
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+    }
+  }
+`;
