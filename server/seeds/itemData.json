@@ -7,7 +7,18 @@
     "itemDescription": "This is a great story",
     "itemCondition": "Mint",
     "itemPrice": 99.99,
-    "username": "AJ"
+    "itemStatus": "Private Collection",
+    "username": "AJ",
+    "reactions" : [ 
+      {
+          "reactionBody" : "non exercitationem consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+          "username" : "Dan"
+      },
+      {
+        "reactionBody" : "test reaction", 
+        "username" : "Nima"
+    } 
+    ] 
   },
   {
     "itemPublisher": "DC",
@@ -17,7 +28,17 @@
     "itemDescription": "This is a grand story",
     "itemCondition": "Very Fine",
     "itemPrice": 19.99,
-    "username": "Dan"
+    "username": "Dan",
+    "reactions" : [ 
+      {
+          "reactionBody" : "Test consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+          "username" : "Nima"
+      },
+      {
+        "reactionBody" : "test2 reaction", 
+        "username" : "AJ"
+    } 
+    ] 
   },
   {
     "itemPublisher": "DC",
@@ -27,7 +48,21 @@
     "itemDescription": "This is an EPIC story",
     "itemCondition": "Good",
     "itemPrice": 9.99,
-    "username": "Nima"
+    "username": "Nima",
+    "reactions" : [ 
+      {
+          "reactionBody" : "Test Test 1234", 
+          "username" : "AJ"
+      },
+      {
+        "reactionBody" : "test2 reaction", 
+        "username" : "Cody"
+      } ,
+      {
+        "reactionBody" : "test3 reaction", 
+        "username" : "Nick"
+      } 
+    ] 
   },
   {
     "itemPublisher": "Marvel",
@@ -37,8 +72,31 @@
     "itemDescription": "Ms. Marvel gets the help of a new friend!",
     "itemCondition": "Very Fine",
     "itemPrice": 30,
+    "itemStatus": "For Sale",    
     "username": "AJ",
-    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705736/25_d31zgr.jpg"
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705736/25_d31zgr.jpg",
+    "reactions" : [ 
+      {
+          "reactionBody" : "I love this comic!", 
+          "username" : "AJ"
+      },
+      {
+        "reactionBody" : "Great characters", 
+        "username" : "Cody"
+      } ,
+      {
+        "reactionBody" : "Fun!", 
+        "username" : "Nick"
+      } ,
+      {
+        "reactionBody" : "A must have!", 
+        "username" : "Dan"
+      } ,
+      {
+        "reactionBody" : "Got it!", 
+        "username" : "Nima"
+      } 
+    ] 
   },
                 
   {
@@ -49,6 +107,7 @@
     "itemDescription": "When Ms. Marvel's newest nemesis goes after one of her old ones, Kamala will have to choose between saving her enemy - and saving her father.",
     "itemCondition": "Very Fine",
     "itemPrice": 4,
+    "itemStatus": "For Sale",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705733/24_rrprmp.jpg"
   },
@@ -61,6 +120,7 @@
     "itemDescription": "Shuri teams up with Spiderman",
     "itemCondition": "Fine",
     "itemPrice": 8,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705731/23_yxcogo.jpg"
   },
@@ -73,6 +133,7 @@
     "itemDescription": "During the Cold War, Logan took on an assignment to aid nuclear scientist Dimitri Suhkarov and his daughter Viktoria in their escape from the Soviet Union. At one point, Logan sent them ahead across a stone bridge while he lay in wait for their pursuers, Ilya Dubromovitch Skorzorki (code-named Volk) and three Russian soldiers. Logan dispatched the soldiers, but was shot by the third before he killed him. Although his accelerated healing was repairing his wounds, he still wasn't fully recovered when he caught up with Volk, and could not prevent him from killing Suhkarov. Volk's mission completed, he allowed Logan and Viktoria to continue their escape.",
     "itemCondition": "FIne",
     "itemPrice": 8,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705731/22_xnmlag.jpg"
   },
@@ -97,6 +158,7 @@
     "itemDescription": "After 80 years- it's here-the 1-000th issue of DETECTIVE COMICS- the title that literally defines DC! This 96-page issue is stacked with an unbelievable lineup of talent that will take you on a journey through Batman's past- present and future...plus a sensational epilogue that features the first-ever DC Universe appearance of the deadly Arkham Knight! But who is under the mask? And why do they want Batman dead? The incredible future of Batman adventures begins here!",
     "itemCondition": "Very Fine",
     "itemPrice": 10,
+    "itemStatus": "For Sale",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705734/20_hcru13.jpg"
   },
@@ -145,6 +207,7 @@
     "itemDescription": "Shifts and Planes Part 2 of 2.",
     "itemCondition": "fair",
     "itemPrice": 10,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705732/16_dyykl3.jpg"
   },
@@ -157,6 +220,7 @@
     "itemDescription": "#96",
     "itemCondition": "Fair",
     "itemPrice": 9,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705742/15_werwag.jpg"
   },
@@ -169,6 +233,7 @@
     "itemDescription": "Xavier has brought Jean to Muir Island so that Moira can try to discover why she manifested the Phoenix entity and why that entity still inhabits her body. Back in New York, Wolverine and Cyclops save Dazzler from the Circle Club. With no good answers forthcoming, Jean returns home to the X-Men to recover but quickly falls under the control of Circle Club member, Jason Wyngarde. The X-Men and Dazzler show up to rescue her but find that Jean has not only joined the Circle Club but also has married Wyngarde.",
     "itemCondition": "Good",
     "itemPrice": 12,
+    "itemStatus": "For Sale",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705738/14_dfgzdd.jpg"
   },
@@ -217,6 +282,7 @@
     "itemDescription": "An all-new, all-creepy one-shot set in the DC Universe-just in time for Halloween! Martha Kent fights for her life against a creature from a spacecraft that lands in front of her farmhouse. A young woman is possessed by the spirit of a murderous Amazon warrior. And More!",
     "itemCondition": "Very Fine",
     "itemPrice": 15,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705738/10_pktf6s.jpg"
   },
@@ -229,6 +295,7 @@
     "itemDescription": "NEW STORYLINE! RISE OF THE ROBOTS, Part One THE FIRST DESCENDER EVENT STARTS HERE! Tim-22 makes his move on Telsa and Quon, Andy and Effie attack the Machine Moon, and Psius and The Hardwire have Tim-21 in their grips. As the various factions hunting Tim-21 close in, the galaxy is on the verge of all-out war. This is it! Everything DESCENDER has been building to begins to erupt in the most important and surprising DESCENDER storyline yet! This five-part DESCENDER event will include a series of interlocking variant covers by LEMIRE and NGUYEN!",
     "itemCondition": "Mint",
     "itemPrice": 8,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705734/9_xyo3qr.jpg"
   },
@@ -289,6 +356,7 @@
     "itemDescription": "The Once and Future King concludes with great tragedy but even greater triumph! Forced out of his self-imposed isolation, T'Challa once again journeys to America and takes up the mantle of the Black Panther! But can the aging, grief-stricken king prevail against a collection of his deadliest villains, led by possibly the greatest threat he's ever faced?",
     "itemCondition": "Very Fine",
     "itemPrice": 10,
+    "itemStatus": "Sold",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705730/3_glxrs0.jpg"
   },
@@ -301,6 +369,7 @@
     "itemDescription": "The Skrulls are among us! The Runaways and the Young Avengers both have a Skrull on their team. Is this mere coincidence or something more sinister?",
     "itemCondition": "good",
     "itemPrice": 8,
+    "itemStatus": "For Sale",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705740/Scan_xn5d1e.jpg"
   },
@@ -313,6 +382,7 @@
     "itemDescription": "The rip-roaring teen mini-series comes to a killer climax! The teams are split up, but can they come together and stop the Invasion?",
     "itemCondition": "Very Fine",
     "itemPrice": 6,
+    "itemStatus": "For Sale",
     "username": "AJ",
     "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705740/2_kwuj3o.jpg"
   },
