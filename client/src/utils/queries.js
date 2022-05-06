@@ -1,24 +1,6 @@
 import { gql } from '@apollo/client';
 
-
-export const QUERY_ITEM = gql`
-query items($id: ID!) {
-    item(_id: $id) {
-        itemPublisher
-        itemTitle
-        itemIssueTitle
-        itemIssueNumber
-        itemDescription
-        itemCondition
-        itemPrice
-        itemImage
-        createdAt
-        username
-    }
-}
-`
-
-export const QUERY_ME = gql`
+export const QUERY_ME = gql `
   {
     me {
       _id
@@ -27,7 +9,7 @@ export const QUERY_ME = gql`
     }
   }
 `;
-export const QUERY_ME_BASIC = gql`
+export const QUERY_ME_BASIC = gql `
   {
     me {
       _id
@@ -35,4 +17,24 @@ export const QUERY_ME_BASIC = gql`
       email
     }
   }
+`;
+
+export const Query_items = gql `
+query Query {
+  items {
+    _id
+    itemTitle
+    itemIssueTitle
+    username
+    itemPublisher
+    itemIssueNumber
+    itemDescription
+    itemCondition
+    itemImage
+    itemPrice
+    createdAt
+  }
+}
+
+
 `;
