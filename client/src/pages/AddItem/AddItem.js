@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from '@apollo/client';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ADD_ITEM } from '../../utils/mutations';
 import { Query_items, QUERY_ME_BASIC } from '../../utils/queries';
 import './AddItem.css'
@@ -8,6 +8,7 @@ import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
 
 export default function AddItem() {
+    
     const { data:userData } = useQuery(QUERY_ME_BASIC)
     const [username] = useState(userData)
     const [formState, setFormState] = useState({ itemPublisher :"", itemTitle:'',itemIssueTitle:'',itemIssueNumber:'',itemDescription:'',itemCondition:'',itemPrice:'',itemImage:'https://res.cloudinary.com/codezilla2022/image/upload/v1651705771/default_ulb9oh.jpg',username:username,});
@@ -19,11 +20,13 @@ export default function AddItem() {
     
     const noImage= ()=>{
         setBtn(false)
+
     }
  
     
 
-    
+   
+        
    const uploadImage = (event)=>{
     const cloud_name = 'dgammnnz0';
     const CLOUDINARY_URL = `https://api.cloudinary.com/v1_1/${cloud_name}/upload`;
@@ -71,6 +74,7 @@ export default function AddItem() {
         event.preventDefault();
         console.log("handel")
         console.log(formState)
+        const tryd = addItem
         // use try/catch instead of promises to handle errors
         try {
         // execute addUser mutation and pass in variable data from form
@@ -78,9 +82,11 @@ export default function AddItem() {
             variables: { ...formState }
         });
         console.log(data)
+        
 
         } catch (e) {
         console.error(e);
+        handleFormSubmit();
         }
         window.location.reload();
     };
