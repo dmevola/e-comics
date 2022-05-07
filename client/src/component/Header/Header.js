@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
@@ -8,9 +8,12 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import { useQuery } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
 
+
 export default function Header() {
     const [{basket,user},dispatch] = useStateValue();
     const { data:userData} = useQuery(QUERY_ME_BASIC)
+    const [username] = useState(userData)
+    console.log(username)
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
@@ -23,7 +26,7 @@ export default function Header() {
            <div className="header__search">
                 <input className="header__searchInput" type="text"/>
                 <SearchIcon className="header__searchIcon"/> 
-                {/* {userData.me.username} */}
+                {username}
                  
             </div>
             <div className="header__nav">
@@ -31,18 +34,17 @@ export default function Header() {
                     <div className="header__option">
                     {Auth.loggedIn() ? (
                     <>
-                    
+                    <Link to={"/addItem"}>
+                        Add Item
+                    </Link>
                     <Link to='/profile'>
-                        <span className='icon'>
-                        <i className='fas fa-user-circle'></i>
-                        </span>
+                        
                         Profile
                     </Link>
+                    
 
                     <a href='/' onClick={logout}>
-                        <span className='icon'>
-                        <i className='fas fa-sign-out-alt'></i>
-                        </span>
+
                         Logout
                     </a>
                     </>
@@ -78,6 +80,7 @@ export default function Header() {
                 }
                     <span className="heade__optionLineTwo Header__basketCount">{basket?.length}</span>
                 </div>
+                
                 
                  
             </div>
