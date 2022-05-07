@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
@@ -7,12 +7,14 @@ import { useStateValue } from '../../StateProvider';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import { useQuery } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
-import { HiSearch } from 'react-icons/hi'
 import { ImSearch } from 'react-icons/im'
+
 
 export default function Header() {
     const [{basket,user},dispatch] = useStateValue();
     const { data:userData} = useQuery(QUERY_ME_BASIC)
+    const [username] = useState(userData)
+    console.log(username)
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
@@ -27,6 +29,9 @@ export default function Header() {
                 <button className='<button class="btn inline-block p-1.5  bg-red-400 font-medium leading-tight uppercase rounded shadow-md hover:bg-yellow-200 hover:shadow-lg   focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out items-center'>{<ImSearch size={15} className='text-gray-600 hover:text-red-400' />}</button>
                 {/* <SearchIcon className="header__searchIcon"/>  */}
                 {/* {userData.me.username} */}
+                <input className="header__searchInput" type="text"/>
+                <SearchIcon className="header__searchIcon"/> 
+                {username}
                  
             </div>
             <div className="header__nav">
@@ -34,18 +39,17 @@ export default function Header() {
                     <div className="header__option">
                     {Auth.loggedIn() ? (
                     <>
-                    
+                    <Link to={"/addItem"}>
+                        Add Item
+                    </Link>
                     <Link to='/profile'>
-                        <span className='icon'>
-                        <i className='fas fa-user-circle'></i>
-                        </span>
+                        
                         Profile
                     </Link>
+                    
 
                     <a href='/' onClick={logout}>
-                        <span className='icon'>
-                        <i className='fas fa-sign-out-alt'></i>
-                        </span>
+
                         Logout
                     </a>
                     </>
@@ -81,6 +85,7 @@ export default function Header() {
                 }
                     <span className="heade__optionLineTwo Header__basketCount">{basket?.length}</span>
                 </div>
+                
                 
                  
             </div>

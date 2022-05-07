@@ -1,6 +1,8 @@
 import React from 'react'
 import'./Home.css'
 import Product from "../../component/Product/Product"
+import ComicList from '../../component/ComicList/Index'
+
 function Home() {
     return (
         <div className="home">
@@ -20,6 +22,7 @@ function Home() {
                 <div className="home__row">
                 <Product id = "232653223" title='Blank Manga Template,' price={119.00} image='https://m.media-amazon.com/images/I/51RHU3JmqcL._AC_UY436_FMwebp_QL65_.jpg' rating={5} />
                 </div>
+                <ComicList></ComicList>
             </div>
         </div>
         

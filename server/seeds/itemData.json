@@ -7,7 +7,18 @@
     "itemDescription": "This is a great story",
     "itemCondition": "Mint",
     "itemPrice": 99.99,
-    "username": "AJ"
+    "itemStatus": "Private Collection",
+    "username": "AJ",
+    "reactions" : [ 
+      {
+          "reactionBody" : "non exercitationem consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+          "username" : "Dan"
+      },
+      {
+        "reactionBody" : "test reaction", 
+        "username" : "Nima"
+    } 
+    ] 
   },
   {
     "itemPublisher": "DC",
@@ -17,7 +28,17 @@
     "itemDescription": "This is a grand story",
     "itemCondition": "Very Fine",
     "itemPrice": 19.99,
-    "username": "Dan"
+    "username": "Dan",
+    "reactions" : [ 
+      {
+          "reactionBody" : "Test consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+          "username" : "Nima"
+      },
+      {
+        "reactionBody" : "test2 reaction", 
+        "username" : "AJ"
+    } 
+    ] 
   },
   {
     "itemPublisher": "DC",
@@ -27,6 +48,354 @@
     "itemDescription": "This is an EPIC story",
     "itemCondition": "Good",
     "itemPrice": 9.99,
-    "username": "Nima"
+    "username": "Nima",
+    "reactions" : [ 
+      {
+          "reactionBody" : "Test Test 1234", 
+          "username" : "AJ"
+      },
+      {
+        "reactionBody" : "test2 reaction", 
+        "username" : "Cody"
+      } ,
+      {
+        "reactionBody" : "test3 reaction", 
+        "username" : "Nick"
+      } 
+    ] 
+  },
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "The Magnificent Ms. Marvel",
+    "itemIssueTitle":  "Introducing Amulet!",
+    "itemIssueNumber": "13",
+    "itemDescription": "Ms. Marvel gets the help of a new friend!",
+    "itemCondition": "Very Fine",
+    "itemPrice": 30,
+    "itemStatus": "For Sale",    
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705736/25_d31zgr.jpg",
+    "reactions" : [ 
+      {
+          "reactionBody" : "I love this comic!", 
+          "username" : "AJ"
+      },
+      {
+        "reactionBody" : "Great characters", 
+        "username" : "Cody"
+      } ,
+      {
+        "reactionBody" : "Fun!", 
+        "username" : "Nick"
+      } ,
+      {
+        "reactionBody" : "A must have!", 
+        "username" : "Dan"
+      } ,
+      {
+        "reactionBody" : "Got it!", 
+        "username" : "Nima"
+      } 
+    ] 
+  },
+                
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "The Magnificent Ms. Marvel",
+    "itemIssueTitle":  "12",
+    "itemIssueNumber": "12",
+    "itemDescription": "When Ms. Marvel's newest nemesis goes after one of her old ones, Kamala will have to choose between saving her enemy - and saving her father.",
+    "itemCondition": "Very Fine",
+    "itemPrice": 4,
+    "itemStatus": "For Sale",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705733/24_rrprmp.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Shuri",
+    "itemIssueTitle":  "A Friend in Need Part One",
+    "itemIssueNumber": "6",
+    "itemDescription": "Shuri teams up with Spiderman",
+    "itemCondition": "Fine",
+    "itemPrice": 8,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705731/23_yxcogo.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Wolverine",
+    "itemIssueTitle":  "Humanity Lost",
+    "itemIssueNumber": "97 Annual",
+    "itemDescription": "During the Cold War, Logan took on an assignment to aid nuclear scientist Dimitri Suhkarov and his daughter Viktoria in their escape from the Soviet Union. At one point, Logan sent them ahead across a stone bridge while he lay in wait for their pursuers, Ilya Dubromovitch Skorzorki (code-named Volk) and three Russian soldiers. Logan dispatched the soldiers, but was shot by the third before he killed him. Although his accelerated healing was repairing his wounds, he still wasn't fully recovered when he caught up with Volk, and could not prevent him from killing Suhkarov. Volk's mission completed, he allowed Logan and Viktoria to continue their escape.",
+    "itemCondition": "FIne",
+    "itemPrice": 8,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705731/22_xnmlag.jpg"
+  },
+                    
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "Superman",
+    "itemIssueTitle":  "Superman: Twice Upon a Time!",
+    "itemIssueNumber": "354",
+    "itemDescription": "A man from another world comes to Earth in search of his lost sweetheart, but a villain named Mr. Alpha captures the girl he thinks he is looking for and forces him to battle Superman.  Introducing the Man of Steel's grandson--Superman 2020!",
+    "itemCondition": "good",
+    "itemPrice": 5,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705744/21_ei0izo.jpg"
+  },
+                      
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "Detective Comics",
+    "itemIssueTitle":  "Batman",
+    "itemIssueNumber": "1000",
+    "itemDescription": "After 80 years- it's here-the 1-000th issue of DETECTIVE COMICS- the title that literally defines DC! This 96-page issue is stacked with an unbelievable lineup of talent that will take you on a journey through Batman's past- present and future...plus a sensational epilogue that features the first-ever DC Universe appearance of the deadly Arkham Knight! But who is under the mask? And why do they want Batman dead? The incredible future of Batman adventures begins here!",
+    "itemCondition": "Very Fine",
+    "itemPrice": 10,
+    "itemStatus": "For Sale",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705734/20_hcru13.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Marvel Team-Up",
+    "itemIssueTitle":  "Spider-Man and the Incredible Hulk: Treachery at Tranquility Base!",
+    "itemIssueNumber": "54",
+    "itemDescription": "54",
+    "itemCondition": "good",
+    "itemPrice": 30,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705744/19_qoahev.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Peter Parker The Spectacular Spider-Man",
+    "itemIssueTitle":  "The Killer Bees of Swarm!",
+    "itemIssueNumber": "36",
+    "itemDescription": "The Killer Bees of Swarm!",
+    "itemCondition": "good",
+    "itemPrice": 15,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705744/18_ra3kfd.jpg"
+  },
+            
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Peter Parker The Spectacular Spider-Man",
+    "itemIssueTitle":  "Ino The Hive!",
+    "itemIssueNumber": "37",
+    "itemDescription": "Ino The Hive!",
+    "itemCondition": "good",
+    "itemPrice": 8,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705743/17_tkdjhx.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Marvel Team-Up",
+    "itemIssueTitle":  "Spider-Man and Starfox",
+    "itemIssueNumber": "143",
+    "itemDescription": "Shifts and Planes Part 2 of 2.",
+    "itemCondition": "fair",
+    "itemPrice": 10,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705732/16_dyykl3.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Marvel Comics Presents Wolverine",
+    "itemIssueTitle":  "Wild Frontier (Part 4) - Danger in the Hills",
+    "itemIssueNumber": "96",
+    "itemDescription": "#96",
+    "itemCondition": "Fair",
+    "itemPrice": 9,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705742/15_werwag.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "X-Men Adventures",
+    "itemIssueTitle":  "No Time For Illusions; The Dark Phoenix Saga Part I",
+    "itemIssueNumber": "Vol 3 #10",
+    "itemDescription": "Xavier has brought Jean to Muir Island so that Moira can try to discover why she manifested the Phoenix entity and why that entity still inhabits her body. Back in New York, Wolverine and Cyclops save Dazzler from the Circle Club. With no good answers forthcoming, Jean returns home to the X-Men to recover but quickly falls under the control of Circle Club member, Jason Wyngarde. The X-Men and Dazzler show up to rescue her but find that Jean has not only joined the Circle Club but also has married Wyngarde.",
+    "itemCondition": "Good",
+    "itemPrice": 12,
+    "itemStatus": "For Sale",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705738/14_dfgzdd.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Excalibur",
+    "itemIssueTitle":  "Hard Truths",
+    "itemIssueNumber": "105",
+    "itemDescription": "Featured Characters: Excalibur Shadowcat (Kitty Pryde) Douglock Wolfsbane (Rahne Sinclair) Colossus (Peter Rasputin) Pete Wisdom Meggan Captain Britain",
+    "itemCondition": "good",
+    "itemPrice": 6,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705735/13_zardwc.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Cable",
+    "itemIssueTitle":  "#23",
+    "itemIssueNumber": "23",
+    "itemDescription": "Cable goes to Professor X with an important request - help Nathan track down his wayward son, Tyler Summers!",
+    "itemCondition": "Good",
+    "itemPrice": 7,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705741/12_u1lox1.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Dark Horse",
+    "itemTitle": "Stranger Things The Other Side",
+    "itemIssueTitle":  "Graphic Novel",
+    "itemIssueNumber": "Graphic Novel",
+    "itemDescription": "The hit Netflix series from the Duffer Brothers is now a spine-tingling comic that recounts Will Beyers' harrowing survival in the treacherous Upside Down!",
+    "itemCondition": "Fine",
+    "itemPrice": 10,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705731/11_fcvgze.jpg"
+  },
+                    
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "DC House of Horror",
+    "itemIssueTitle":  "#1",
+    "itemIssueNumber": "1",
+    "itemDescription": "An all-new, all-creepy one-shot set in the DC Universe-just in time for Halloween! Martha Kent fights for her life against a creature from a spacecraft that lands in front of her farmhouse. A young woman is possessed by the spirit of a murderous Amazon warrior. And More!",
+    "itemCondition": "Very Fine",
+    "itemPrice": 15,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705738/10_pktf6s.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Image",
+    "itemTitle": "Descender",
+    "itemIssueTitle":  "Rise of the Robots",
+    "itemIssueNumber": "22",
+    "itemDescription": "NEW STORYLINE! RISE OF THE ROBOTS, Part One THE FIRST DESCENDER EVENT STARTS HERE! Tim-22 makes his move on Telsa and Quon, Andy and Effie attack the Machine Moon, and Psius and The Hardwire have Tim-21 in their grips. As the various factions hunting Tim-21 close in, the galaxy is on the verge of all-out war. This is it! Everything DESCENDER has been building to begins to erupt in the most important and surprising DESCENDER storyline yet! This five-part DESCENDER event will include a series of interlocking variant covers by LEMIRE and NGUYEN!",
+    "itemCondition": "Mint",
+    "itemPrice": 8,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705734/9_xyo3qr.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Image",
+    "itemTitle": "Descender",
+    "itemIssueTitle":  "#1",
+    "itemIssueNumber": "1",
+    "itemDescription": "One young robot's struggle to stay alive in a universe where all androids have been outlawed and bounty hunters lurk on every planet. A rip-roaring and heart-felt cosmic odyssey that pits humanity against machine, and world against world, to create a sprawling space opera from the creators of Trillium, Sweet Tooth, and Little Gotham.",
+    "itemCondition": "mint",
+    "itemPrice": 10,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705730/8_oqjhld.jpg"
+  },
+            
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "Vigilante Southland",
+    "itemIssueTitle":  "#2",
+    "itemIssueNumber": "2",
+    "itemDescription": "Donny has lost everything—his girlfriend, his home, and nearly his life—but the men who did this to him have also woken him up. To put it all back together, Donny will need to tear apart the conspiracy that rocked his world. And for that, he’ll need help. Namely, the retired Los Angeles vigilante known as the Eastsider is going to teach Donny a thing or two about putting on a mask and kicking some butt.",
+    "itemCondition": "Good",
+    "itemPrice": 4,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705735/7_whrejg.jpg"
+  },
+                      
+  {
+    "itemPublisher": "DC",
+    "itemTitle": "Batman: Shadow of the Bat",
+    "itemIssueTitle":  "The Immigrant: Rosemary's Baby",
+    "itemIssueNumber": "24",
+    "itemDescription": "Batman saves a Latin girl from a gang of punks at the Gotham Docks. Upon saving her, he learns that she's an illegal immigrant that arrived to Gotham by sea to recover her son. She tells Batman that she had sold her son for 50 dollars to some American people and later learned that her son was going to be taken to Gotham City. Batman informs Commissioner Gordon about the case and helps him figure out how a criminal has cheated the lie detector three times.",
+    "itemCondition": "good",
+    "itemPrice": 8,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705733/6_gmu0g9.jpg"
+  },
+                    
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "X-Men and Alpha Flight",
+    "itemIssueTitle":  "The Gift: Part 2",
+    "itemIssueNumber": "2",
+    "itemDescription": "The X-Men and Alpha Flight forces are scattered across the Arctic, as Loki continues his reign of confusion. Wolverine attacks two members of Alpha Flight.",
+    "itemCondition": "fair",
+    "itemPrice": 10,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705742/5_g0vpvr.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Black Panther Vol 3",
+    "itemIssueTitle":  "The Once and Future King, Part 2",
+    "itemIssueNumber": "37",
+    "itemDescription": "The Once and Future King concludes with great tragedy but even greater triumph! Forced out of his self-imposed isolation, T'Challa once again journeys to America and takes up the mantle of the Black Panther! But can the aging, grief-stricken king prevail against a collection of his deadliest villains, led by possibly the greatest threat he's ever faced?",
+    "itemCondition": "Very Fine",
+    "itemPrice": 10,
+    "itemStatus": "Sold",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705730/3_glxrs0.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Secret Invasion: Runaways/Young Avengers",
+    "itemIssueTitle":  "#1",
+    "itemIssueNumber": "1",
+    "itemDescription": "The Skrulls are among us! The Runaways and the Young Avengers both have a Skrull on their team. Is this mere coincidence or something more sinister?",
+    "itemCondition": "good",
+    "itemPrice": 8,
+    "itemStatus": "For Sale",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705740/Scan_xn5d1e.jpg"
+  },
+                      
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "Secret Invasion: Runaways/Young Avengers",
+    "itemIssueTitle":  "#3",
+    "itemIssueNumber": "3",
+    "itemDescription": "The rip-roaring teen mini-series comes to a killer climax! The teams are split up, but can they come together and stop the Invasion?",
+    "itemCondition": "Very Fine",
+    "itemPrice": 6,
+    "itemStatus": "For Sale",
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705740/2_kwuj3o.jpg"
+  },
+                    
+  {
+    "itemPublisher": "Marvel",
+    "itemTitle": "The Rise of Ultraman (2020)",
+    "itemIssueTitle":  "Ultraman",
+    "itemIssueNumber": "1",
+    "itemDescription": "In darkness there lurks Kaiju - terrifying and unfathomable monsters. Between Kaiju and the rest of us stands the United Science Patrol!",
+    "itemCondition": "Very Fine",
+    "itemPrice": 6,
+    "username": "AJ",
+    "itemImage": "https://res.cloudinary.com/codezilla2022/image/upload/v1651705735/4_dokkm9.jpg"
   }
-]
+]	
