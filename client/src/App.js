@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Checkout from "./pages/Checkout/Checkout";
 import Payment from "./pages/Payment/Payment";
 import AddItem from "./pages/AddItem/AddItem";
+import Profile from "./pages/Profile/Profile"
 
 const httplink = createHttpLink({
   uri: 'http://localhost:3003/graphql'
