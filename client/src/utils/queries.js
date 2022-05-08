@@ -1,9 +1,10 @@
 import { gql } from '@apollo/client';
 
 
-export const QUERY_ITEM = gql`
-query items($id: ID!) {
-    item(_id: $id) {
+export const QUERY_ITEMS = gql`
+query items {
+    items {
+        _id
         itemPublisher
         itemTitle
         itemIssueTitle
@@ -16,7 +17,7 @@ query items($id: ID!) {
         username
     }
 }
-`
+`;
 
 export const QUERY_ME = gql`
   {
