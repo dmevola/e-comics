@@ -45,6 +45,7 @@ function App() {
             <Route path="/addItem" element={localStorage.getItem('id_token')? <><AddItem/></> : <><Login/></>}/>
             <Route path="/signup" element={<><SignUp/></>}/>
             <Route path="/login" element={<><Login/></>}/>
+            <Route exact path="/profile/:username?" component={Profile}/>
             <Route path="*" element={<><Header/><Home/></>}/>     
           </Routes>
       </div>

@@ -26,8 +26,8 @@ const Profile = (props) => {
             </h2>
           </div>
     
-          <div className="">
-            <div className="">
+          <div className="home">
+            <div className="home___row">
               <ComicList                            
               />
             </div>    
