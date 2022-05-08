@@ -22,12 +22,12 @@ const Profile = (props) => {
         <div>
           <div className="">
             <h2 className="">
-              Welcome to profile {user.username} A true believer!
+              Welcome to the profile of {user.username}. A true believer!
             </h2>
           </div>
     
-          <div className="home">
-            <div className="home___row">
+          <div className="">
+            <div className="">
               <ComicList                            
               />
             </div>    
