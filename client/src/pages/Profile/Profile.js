@@ -3,12 +3,12 @@ import './Profile.css';
 import { useParams } from 'react-router-dom';
 import ComicList from "../../component/ComicList/Index";
 import { useQuery } from '@apollo/client';
-import { Query_Profile_Items, QUERY_ME } from '../../utils/queries';
+import { Query_items, QUERY_ME } from '../../utils/queries';
 
 
 const Profile = (props) => {
     const { username: userParam } = useParams();
-    const { loading, data } = useQuery(userParam ? Query_Profile_Items : QUERY_ME, {
+    const { loading, data } = useQuery(userParam ? Query_items : QUERY_ME, {
       variables: { username: userParam },
     });
     
