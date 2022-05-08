@@ -35,6 +35,23 @@ query Query {
     createdAt
   }
 }
+`;
 
+export const Query_Profile_Items = gql `
+query Query {
+  user (username: $username) {
+    _id
+    itemTitle
+    itemIssueTitle
+    username
+    itemPublisher
+    itemIssueNumber
+    itemDescription
+    itemCondition
+    itemImage
+    itemPrice
+    createdAt
+  }
+}
 
 `;

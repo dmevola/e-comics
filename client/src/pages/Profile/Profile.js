@@ -1,16 +1,19 @@
 import React from "react";
 import './Profile.css';
-import { Redirect, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ComicList from "../../component/ComicList/Index";
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import { useQuery } from '@apollo/client';
+import { Query_Profile_Items, QUERY_ME } from '../../utils/queries';
+
 
 const Profile = (props) => {
     const { username: userParam } = useParams();
-    const { loading, data } = useQuery(QUERY_USER, {
-        variables: { username: userParam }
-      });
+    const { loading, data } = useQuery(userParam ? Query_Profile_Items : QUERY_ME, {
+      variables: { username: userParam },
+    });
     
+    const user = data?.me || data?.user || {};
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -19,20 +22,16 @@ const Profile = (props) => {
         <div>
           <div className="">
             <h2 className="">
-              Welcome to {userParam ? `${user.username}'s` : 'your'} profile. A true believer!
+              Welcome to profile {user.username} A true believer!
             </h2>
-    
-            
           </div>
     
-        <div className="">
+          <div className="">
             <div className="">
-              <ComicList
-                
-                
+              <ComicList                            
               />
             </div>    
-        </div>
+          </div>
           
         </div>
       );

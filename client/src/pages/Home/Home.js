@@ -11,7 +11,7 @@ function Home() {
                 
                 <div className="home__row">
                     <Product id = "3344" title='Cat Kid Comic Club: A Graphic Novel (Cat Kid Comic Club #1): From the Creator of Dog Man' price={7.00} image='https://images-na.ssl-images-amazon.com/images/I/51wuQxpeDoL._SX336_BO1,204,203,200_.jpg' rating={4} />
-                    <Product  id = "2323223" title='Cat Kid Comic Club #4: A Graphic Novel: From the Creator of Dog Man' price={22.00} image="https://m.media-amazon.com/images/I/615Lif3nhNL._AC_UY436_FMwebp_QL65_.jpg" rating={5} username={AJ} />
+                    <Product  id = "2323223" title='Cat Kid Comic Club #4: A Graphic Novel: From the Creator of Dog Man' price={22.00} image="https://m.media-amazon.com/images/I/615Lif3nhNL._AC_UY436_FMwebp_QL65_.jpg" rating={5} />
                 </div>
                 <div className="home__row">
                 <Product id = "23234223" title='Marvel Greatest Comics: 100 Comics that Built a Universe, ' price={11.99} image='https://m.media-amazon.com/images/I/A1tmfYAtb+L._AC_UY436_FMwebp_QL65_.jpg' rating={5} />
