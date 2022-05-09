@@ -53,7 +53,7 @@ export default function Header() {
                     </>
                 ) : (
                     <>
-                    <Link to='/login' className='bg-red-400 my-1 items-center flex justify-center pb-1 rounded shadow-md leading-tight text-gray-700 md:w-[80px] '>
+                    <Link to='/login' className='bg-red-400 my-1 items-center flex justify-center pb-1 rounded shadow-md leading-tight text-gray-700 md:w-[80px] transition duration-150 ease-in-out hover:outline hover:outline-1'>
                         <div>
                             {/* <span className='icon'>
                                 <i className='fas fa-sign-in-alt'></i>
@@ -62,7 +62,7 @@ export default function Header() {
                         </div>
                         
                     </Link>
-                    <Link to='/signup'className='bg-yellow-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3'>
+                    <Link to='/signup'className='bg-yellow-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1'>
                         {/* <span className='icon'>
                             <i className='fas fa-user-plus'></i>
                         </span> */}
