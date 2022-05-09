@@ -92,96 +92,82 @@ export default function AddItem() {
         }
         window.location.reload();
     };
-    return ( <
-        div className = "addItem" >
-        <
-        div className = "addItem__container" >
-        <
-        form onSubmit = {
+    return ( 
+        <div className = "addItem" >
+        <div className = "addItem__container" >
+        <form onSubmit = {
             (e) => { e.preventDefault(); } } >
-        <
-        input placeholder = "itemPublisher"
+        <input placeholder = "itemPublisher"
         name = "itemPublisher"
         type = "itemPublisher"
         id = "itemPublisher"
         value = { formState.itemPublisher }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemTitle"
+        className = "addItem__input" 
+        />
+        <input placeholder = "itemTitle"
         name = "itemTitle"
         type = "itemTitle"
         id = "itemTitle"
         value = { formState.itemTitle }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemIssueTitle"
+        className = "addItem__input" 
+        />
+        <input placeholder = "itemIssueTitle"
         name = "itemIssueTitle"
         type = "itemIssueTitle"
         id = "itemIssueTitle"
         value = { formState.itemIssueTitle }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemIssueNumber"
+        className = "addItem__input" 
+        />
+        <input placeholder = "itemIssueNumber"
         name = "itemIssueNumber"
         type = "itemIssueNumber"
         id = "itemIssueNumber"
         value = { formState.itemIssueNumber }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemDescription"
+        className = "addItem__input" 
+        />
+        <input placeholder = "itemDescription"
         name = "itemDescription"
         type = "itemDescription"
         id = "itemDescription"
         value = { formState.itemDescription }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemCondition"
+        className = "addItem__input"
+        />
+        <input placeholder = "itemCondition"
         name = "itemCondition"
         type = "itemCondition"
         id = "itemCondition"
         value = { formState.itemCondition }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemPrice"
+        className = "addItem__input" 
+        />
+        <input placeholder = "itemPrice"
         name = "itemPrice"
         type = "itemPrice"
         id = "itemPrice"
         value = { formState.itemPrice }
         onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input name = "itemImage"
+        className = "addItem__input"
+        />
+        <input name = "itemImage"
         type = "file"
         value = { formState.image }
         onChange = { uploadImage }
-        className = "addItem__input" /
-        >
-        <
-        button onClick = { noImage } > No image < /button>
+        className = "addItem__input" 
+        />
+        <button onClick = { noImage } > No image </button>
 
 
-        <
-        button disabled = { btn }
-        onClick = { handleFormSubmit } > Submit < /button>
+        <button disabled = { btn }
+        onClick = { handleFormSubmit } > Submit </button>
 
-        <
-        /form> { /* {data.map(item=>(<div>{item}</div>))} */ } <
-        /div>
+        </form> { /* {data.map(item=>(<div>{item}</div>))} */ } 
+        </div>
 
-        <
-        /div>
+        </div>
     )
-}
+};
