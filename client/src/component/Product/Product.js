@@ -5,7 +5,7 @@ import { useStateValue } from '../../StateProvider'
 import Auth from '../../utils/auth';
 import { useNavigate } from 'react-router';
 
-export default function Product({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt}) {
+export default function Product({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt,itemTitle}) {
     const [{basket},dispatch] = useStateValue();
     const Navigate = useNavigate();
 
@@ -15,6 +15,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
                 type : "ADD_TO_BASKET",
                 item:{
                     id : id,
+                    itemTitle:itemTitle,
                     itemIssueTitle:itemIssueTitle,
                     itemDescription:itemDescription,
                     itemPublisher:itemPublisher,
@@ -34,7 +35,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
   return (
     <div className="product">
         <div>
-            <p><strong>id</strong> {id}</p>
+            <p><strong>Title:</strong>{itemTitle}</p>
             <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
             <p><strong>Description:</strong>{itemDescription}</p>
             <p><strong>Publisher:</strong>{itemPublisher}</p>

@@ -2,7 +2,7 @@ import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from '../../StateProvider';
 
-export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt}) {
+export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt,itemTitle}) {
     const [{basket},dispatch] = useStateValue();
 
     const removeFromBasket =()=>{
@@ -17,7 +17,7 @@ export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,item
     return (
         <div className="checkoutProduckt">
             <div>
-            <p><strong>id</strong> {id}</p>
+            <p><strong>Title: </strong>{itemTitle}</p>
             <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
             <p><strong>Description:</strong>{itemDescription}</p>
             <p><strong>Publisher:</strong>{itemPublisher}</p>

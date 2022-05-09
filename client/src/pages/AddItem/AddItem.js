@@ -90,7 +90,7 @@ export default function AddItem() {
             console.error(e);
             handleFormSubmit();
         }
-        window.location.reload();
+        // window.location.reload();
     };
     return ( <
         div className = "addItem" >
