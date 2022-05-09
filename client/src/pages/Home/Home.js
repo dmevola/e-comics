@@ -12,6 +12,7 @@ function Home() {
     console.log(items);
 
     return (
+
         <main>
         <div className="home">
             <div className="home__container">
@@ -21,6 +22,7 @@ function Home() {
                     <ComicList items={items} title="What's your issue?"/>
                 )}
         
+
             </div>
         </div>
         </main>

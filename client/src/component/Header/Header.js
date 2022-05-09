@@ -33,7 +33,9 @@ export default function Header() {
                  
             </div>
             <div className="header__nav flex items-center">
+
                 <Link  to={!Auth.loggedIn() && '/login'}>
+
                     <div className="header__option md:flex-row">
                     {Auth.loggedIn() ? (
                     <>

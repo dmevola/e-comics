@@ -4,8 +4,10 @@ import { ADD_ITEM } from '../../utils/mutations';
 import { QUERY_ITEMS, QUERY_ME_BASIC } from '../../utils/queries';
 import './AddItem.css'
 import axios from 'axios';
+
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage, lazyload, accessibility, responsive, placeholder } from '@cloudinary/react';
+
 
 export default function AddItem() {
 
