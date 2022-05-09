@@ -20,3 +20,8 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.comic_img {
+    width: 100%;
+    max-width: 450px;
+}
