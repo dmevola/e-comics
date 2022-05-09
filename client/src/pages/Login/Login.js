@@ -71,7 +71,7 @@ export default function Login() {
                     id='password'
                     value={formState.password}
                     onChange={handleChange}/>
-                <button className="login__signInButton" >Sing In</button>
+                <button className="login__signInButton" >Sign In</button>
             </form>
             {error && <h1>Login failed</h1>}
             <p>
