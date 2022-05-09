@@ -5,7 +5,7 @@ import { useStateValue } from '../../StateProvider'
 import Auth from '../../utils/auth';
 import { useNavigate } from 'react-router';
 
-export default function Product({id,title,image,price,rating}) {
+export default function Product({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt}) {
     const [{basket},dispatch] = useStateValue();
     const Navigate = useNavigate();
 
@@ -14,11 +14,15 @@ export default function Product({id,title,image,price,rating}) {
             dispatch({
                 type : "ADD_TO_BASKET",
                 item:{
-                    id:id,
-                    title:title,
-                    image:image,
-                    price:price,
-                    rating:rating
+                    id : id,
+                    itemIssueTitle:itemIssueTitle,
+                    itemDescription:itemDescription,
+                    itemPublisher:itemPublisher,
+                    username:username,
+                    itemPrice:itemPrice
+                    ,itemCondition:itemCondition
+                    ,itemImage:itemImage,
+                    createdAt:createdAt
                 }
             })
         }else{
@@ -29,18 +33,20 @@ export default function Product({id,title,image,price,rating}) {
 
   return (
     <div className="product">
-        <div className="product__info">
-            <p>{title}</p>
-            <p className="product__price">
-                <small>$</small>
-                <strong>{price}</strong>
-            </p>
-            <div className="product__rating">
-                {Array(rating).fill().map((_,i)=>(<p>⭐️</p>))}
-            </div>
+        <div>
+            <p><strong>id</strong> {id}</p>
+            <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
+            <p><strong>Description:</strong>{itemDescription}</p>
+            <p><strong>Publisher:</strong>{itemPublisher}</p>
+            <p><strong>Seller:</strong>{username}</p>
+            <p><strong>Price:</strong>${itemPrice}</p>
+            <p><strong>Condition:</strong> {itemCondition}</p>
+            <img src={itemImage}/>
+            <br></br>
+            created at :  {createdAt}
+            <br></br>
+            <button onClick={addToBasket} >Add to basket</button>
         </div>
-        <img src={image} alt="" />
-        <button onClick={addToBasket}>Add to basket</button>
     
     </div>
   )
