@@ -28,7 +28,7 @@ export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,item
             <br></br>
             created at :  {createdAt}
             <br></br>
-            <button onClick={removeFromBasket}>Remove from Basket</button>
+            <button className="bg-red removebtn" onClick={removeFromBasket}>Remove from Basket</button>
         </div>
         </div>
     )

@@ -28,17 +28,18 @@ export default function Payment() {
                     <br></br>
                     <br></br>
                     {basket.map(item=>(
-                        
-                        <Product id={item.id}
-                        itemIssueTitle={item.itemIssueTitle}
-                        itemDescription ={item.itemDescription}
-                        itemPublisher = {item.itemPublisher}
-                        username = {item.username}
-                        itemPrice = {item.itemPrice}
-                        itemCondition = {item.itemCondition}
-                        itemImage = {item.itemImage}
-                        createdAt = {item.createdAt}
+                        <div className="prodct">
+                            <Product id={item.id}
+                            itemIssueTitle={item.itemIssueTitle}
+                            itemDescription ={item.itemDescription}
+                            itemPublisher = {item.itemPublisher}
+                            username = {item.username}
+                            itemPrice = {item.itemPrice}
+                            itemCondition = {item.itemCondition}
+                            itemImage = {item.itemImage}
+                            createdAt = {item.createdAt}
                       />
+                      </div>
                 ))}
                 </div>
             </div>

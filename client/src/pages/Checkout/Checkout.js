@@ -21,19 +21,21 @@ export default function Checkout() {
                 <h2 className="checkout__title">
                     Your shopping bascket
                 </h2>
-                {basket.map(item=>(
-                    <CheckoutProduckt id={item.id}
-                    itemIssueTitle={item.itemIssueTitle}
-                    itemDescription ={item.itemDescription}
-                    itemPublisher = {item.itemPublisher}
-                    username = {item.username}
-                    itemPrice = {item.itemPrice}
-                    itemCondition = {item.itemCondition}
-                    itemImage = {item.itemImage}
-                    createdAt = {item.createdAt}
-        
-                  />
-                ))}
+                  {basket.map(item=>(
+                    <div className="prodct">    
+                      <CheckoutProduckt  id={item.id}
+                      itemIssueTitle={item.itemIssueTitle}
+                      itemDescription ={item.itemDescription}
+                      itemPublisher = {item.itemPublisher}
+                      username = {item.username}
+                      itemPrice = {item.itemPrice}
+                      itemCondition = {item.itemCondition}
+                      itemImage = {item.itemImage}
+                      createdAt = {item.createdAt}
+                      />
+                    </div>
+                    
+                    ))}
 
             </div>
         </div>

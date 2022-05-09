@@ -45,7 +45,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
             <br></br>
             created at :  {createdAt}
             <br></br>
-            <button onClick={addToBasket} >Add to basket</button>
+            <button className="addTOBasket bg-green-300" onClick={addToBasket} >Add to basket</button>
         </div>
     
     </div>
