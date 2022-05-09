@@ -2,19 +2,18 @@ import React from "react";
 import './Profile.css';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../../utils/queries'
+import { QUERY_USER } from '../../utils/queries'
 
 
 const Profile = (props) => {
     const { username: userParam } = useParams();
     
-    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    const { loading, data } = useQuery(QUERY_USER, {
       variables: { username: userParam },
     });
     
     const item = data?.item || {};
-    console.log(item)
-  
+    
     return (
         <div>
           <div className="center">
