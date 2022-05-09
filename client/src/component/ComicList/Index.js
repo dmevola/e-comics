@@ -12,10 +12,11 @@ const ComicList = ({ items, title }) => {
       <h3>{title}</h3>
       {items && 
       items.map(item => (
-      <div className="prodct" key={item._id}>
+      <div className="product" key={item._id}>
        
          
           <Product id={item._id}
+            itemTitle={item.itemTitle}
             itemIssueTitle={item.itemIssueTitle}
             itemDescription ={item.itemDescription}
             itemPublisher = {item.itemPublisher}

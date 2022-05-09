@@ -24,6 +24,7 @@ export default function Checkout() {
                   {basket.map(item=>(
                     <div className="prodct">    
                       <CheckoutProduckt  id={item.id}
+                      itemTitle={item.itemTitle}
                       itemIssueTitle={item.itemIssueTitle}
                       itemDescription ={item.itemDescription}
                       itemPublisher = {item.itemPublisher}
