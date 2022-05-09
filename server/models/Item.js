@@ -43,7 +43,8 @@ const itemSchema = new Schema({
         set: v => v*100
     },
     itemImage: { //Gets set on upload
-        type: String
+        type: String,
+        default: "https://res.cloudinary.com/codezilla2022/image/upload/v1651705771/default_ulb9oh.jpg"
     },
     itemStatus: { //For Sale, Private Collection, Sold
         type: String,
