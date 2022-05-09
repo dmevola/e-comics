@@ -33,23 +33,23 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-      <div className="app ">
-        
-        <Routes>
+    <Router>
+    <div className="app ">
+      
+      <Routes>
 
-            <Route path="/checkout" element={localStorage.getItem('id_token')? <><Checkout/></> : <><Login/></>}/>  
-            <Route path="/payment" element={localStorage.getItem('id_token')? <><Payment/></> : <><Login/></>}/> 
-            <Route path="/home" element={<><Header/><Home/></>}/>
-            <Route path="/addItem" element={localStorage.getItem('id_token')? <><AddItem/></> : <><Login/></>}/>
-            <Route path="/signup" element={<><SignUp/></>}/>
-            <Route path="/login" element={<><Login/></>}/>
-            <Route path="*" element={<><Header/><Home/></>}/>     
-          </Routes>
-      </div>
-    </Router>
-    </ApolloProvider>
-  );
+          <Route path="/checkout" element={localStorage.getItem('id_token')? <><Checkout/></> : <><Login/></>}/>  
+          <Route path="/payment" element={localStorage.getItem('id_token')? <><Payment/></> : <><Login/></>}/> 
+          <Route path="/home" element={<><Header/><Home/></>}/>
+          <Route path="/addItem" element={localStorage.getItem('id_token')? <><AddItem/></> : <><Login/></>}/>
+          <Route path="/signup" element={<><SignUp/></>}/>
+          <Route path="/login" element={<><Login/></>}/>
+          <Route path="*" element={<><Header/><Home/></>}/>     
+        </Routes>
+    </div>
+  </Router>
+  </ApolloProvider>
+);
 }
 
 export default App;

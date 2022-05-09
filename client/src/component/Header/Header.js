@@ -33,20 +33,22 @@ export default function Header() {
                  
             </div>
             <div className="header__nav flex items-center">
-                <Link to={!Auth.loggedIn() && '/login'}>
+
+                <Link  to={!Auth.loggedIn() && '/login'}>
+
                     <div className="header__option md:flex-row">
                     {Auth.loggedIn() ? (
                     <>
-                    <Link to={"/addItem"}>
+                    <Link className='bg-yellow-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1' to={"/addItem"}>
                         Add Item
                     </Link>
-                    <Link to='/profile'>
+                    <Link className='bg-blue-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1' to='/profile'>
                         
                         Profile
                     </Link>
                     
 
-                    <a href='/' onClick={logout}>
+                    <a className="bg-red-400 my-1 items-center flex justify-center pb-1 rounded shadow-md leading-tight text-gray-700 md:w-[80px] transition duration-150 ease-in-out hover:outline hover:outline-1" href='/' onClick={logout}>
 
                         Logout
                     </a>
