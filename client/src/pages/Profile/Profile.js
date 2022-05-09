@@ -1,42 +1,38 @@
 import React from "react";
 import './Profile.css';
 import { useParams } from 'react-router-dom';
-import ComicList from "../../component/ComicList/Index";
 import { useQuery } from '@apollo/client';
-import { Query_items, QUERY_ME } from '../../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../../utils/queries'
 
 
 const Profile = (props) => {
     const { username: userParam } = useParams();
-    const { loading, data } = useQuery(userParam ? Query_items : QUERY_ME, {
+    
+    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
       variables: { username: userParam },
     });
     
-    const user = data?.me || data?.user || {};
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-    
+    const item = data?.item || {};
+    console.log(item)
+  
     return (
         <div>
-          <div className="">
-            <h2 className="">
-              Welcome to the profile of {user.username}. A true believer!
-            </h2>
+          <div className="center">
+            <h2>Welcome to the profile of <span class="username">{userParam}</span>. A true believer!</h2>
           </div>
     
-          <div className="">
-            <div className="">
-              <ComicList                            
-              />
-            </div>    
+           <div>
+            <p><strong>Issue Title:</strong> {item.itemIssueTitle}</p>
+            <p><strong>Description:</strong>{item.itemDescription}</p>
+            <p><strong>Publisher:</strong>{item.itemPublisher}</p>
+            <p><strong>Price:</strong>${item.itemPrice}</p>
+            <p><strong>Condition:</strong> {item.itemCondition}</p>
+            {/* <img src={item.itemImage}/> */}
           </div>
-          
-        </div>
+      </div>
+
+         
       );
 };
     
-
-
 export default Profile;

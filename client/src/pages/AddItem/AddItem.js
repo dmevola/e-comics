@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from '@apollo/client';
 import React, { useEffect, useState } from 'react'
 import { ADD_ITEM } from '../../utils/mutations';
-import { Query_items, QUERY_ME_BASIC } from '../../utils/queries';
+import { QUERY_ITEMS, QUERY_ME_BASIC } from '../../utils/queries';
 import './AddItem.css'
 import axios from 'axios';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -13,7 +13,7 @@ export default function AddItem() {
     const [username] = useState(userData)
     const [formState, setFormState] = useState({ itemPublisher :"", itemTitle:'',itemIssueTitle:'',itemIssueNumber:'',itemDescription:'',itemCondition:'',itemPrice:'',itemImage:'https://res.cloudinary.com/codezilla2022/image/upload/v1651705771/default_ulb9oh.jpg',username:username,});
     const [addItem, { error }] = useMutation(ADD_ITEM)
-    const { data, loading, errors } = useQuery(Query_items);
+    const { data, loading, errors } = useQuery(QUERY_ITEMS);
     const [btn,setBtn] = useState(true)
     
     console.log(data,username)

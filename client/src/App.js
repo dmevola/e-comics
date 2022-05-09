@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 import Checkout from "./pages/Checkout/Checkout";
 import Payment from "./pages/Payment/Payment";
 import AddItem from "./pages/AddItem/AddItem";
-import Profile from "./pages/Profile/Profile"
+import Profile from "./pages/Profile/Profile";
 
 const httplink = createHttpLink({
   uri: 'http://localhost:3003/graphql'
@@ -45,7 +45,7 @@ function App() {
             <Route path="/addItem" element={localStorage.getItem('id_token')? <><AddItem/></> : <><Login/></>}/>
             <Route path="/signup" element={<><SignUp/></>}/>
             <Route path="/login" element={<><Login/></>}/>
-            <Route exact path="/profile/:username?" component={Profile}/>
+            <Route path="/profile/:username" element={<><Header/><Profile/></>}/>
             <Route path="*" element={<><Header/><Home/></>}/>     
           </Routes>
       </div>
