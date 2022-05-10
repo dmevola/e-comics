@@ -20,9 +20,11 @@ const Profile = (props) => {
     }
               
     return (
+
+        
         <div>
-          <div className="center">
-            <h2>Welcome to the profile of <span class="username">{userParam}</span>. A true believer!</h2>
+          <div class = "profile-message">
+            <h2>Welcome to the Profile Page for <span class="username">{userParam}</span>. A true believer!</h2>
           </div>
 
           {itemsByUser.map((itemsByUser) =>
