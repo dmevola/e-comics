@@ -4,6 +4,7 @@ import "./Payment.css"
 import { useStateValue } from '../../StateProvider';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { getBasketTotal } from '../../reducer'
+import Product from '../../component/Product/Product';
 
 
 export default function Payment() {
@@ -24,14 +25,21 @@ export default function Payment() {
                         <h3>Review items and delivery</h3>
                 </div>
                 <div className="payment__items">
+                    <br></br>
+                    <br></br>
                     {basket.map(item=>(
-                        <CheckoutProduckt
-                            id ={item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                            rating={item.rating}
-                        />
+                        <div className="prodct">
+                            <Product id={item.id}
+                            itemIssueTitle={item.itemIssueTitle}
+                            itemDescription ={item.itemDescription}
+                            itemPublisher = {item.itemPublisher}
+                            username = {item.username}
+                            itemPrice = {item.itemPrice}
+                            itemCondition = {item.itemCondition}
+                            itemImage = {item.itemImage}
+                            createdAt = {item.createdAt}
+                      />
+                      </div>
                 ))}
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from '../../StateProvider';
 
-export default function CheckoutProduckt({id,image,title,price,rating}) {
+export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt,itemTitle}) {
     const [{basket},dispatch] = useStateValue();
 
     const removeFromBasket =()=>{
@@ -12,21 +12,24 @@ export default function CheckoutProduckt({id,image,title,price,rating}) {
         })
         
     }
+  
 
     return (
         <div className="checkoutProduckt">
-            <img src={image} alt="" className="checkoutProduckt__image"/>
-            <div className="checkoutProduckt__info">
-                <p className="checkoutProduckt__title">{title}</p>
-                <p className="checkoutProduckt__price">
-                    <small>$</small> 
-                    <strong>{price}</strong>   
-                </p> 
-                <div className="checkoutProduckt__rating">
-                    {Array(rating).fill().map((_,i)=>(<p>⭐️</p>))}    
-                </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
-            </div>
+            <div>
+            <p><strong>Title: </strong>{itemTitle}</p>
+            <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
+            <p><strong>Description:</strong>{itemDescription}</p>
+            <p><strong>Publisher:</strong>{itemPublisher}</p>
+            <p><strong>Seller:</strong>{username}</p>
+            <p><strong>Price:</strong>${itemPrice}</p>
+            <p><strong>Condition:</strong> {itemCondition}</p>
+            <img src={itemImage}/>
+            <br></br>
+            created at :  {createdAt}
+            <br></br>
+            <button className="bg-red removebtn" onClick={removeFromBasket}>Remove from Basket</button>
+        </div>
         </div>
     )
 }

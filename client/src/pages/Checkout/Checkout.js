@@ -6,6 +6,7 @@ import CheckoutProduckt from '../../component/CheckoutProduct/CheckoutProduct'
 
 
 
+
 export default function Checkout() {
     
     const [{basket,user},dispatch] = useStateValue();
@@ -20,15 +21,22 @@ export default function Checkout() {
                 <h2 className="checkout__title">
                     Your shopping bascket
                 </h2>
-                {basket.map(item=>(
-                    <CheckoutProduckt
-                        id ={item.id}
-                        title={item.title}
-                        image={item.image}
-                        price={item.price}
-                        rating={item.rating}
-                    />
-                ))}
+                  {basket.map(item=>(
+                    <div className="prodct">    
+                      <CheckoutProduckt  id={item.id}
+                      itemTitle={item.itemTitle}
+                      itemIssueTitle={item.itemIssueTitle}
+                      itemDescription ={item.itemDescription}
+                      itemPublisher = {item.itemPublisher}
+                      username = {item.username}
+                      itemPrice = {item.itemPrice}
+                      itemCondition = {item.itemCondition}
+                      itemImage = {item.itemImage}
+                      createdAt = {item.createdAt}
+                      />
+                    </div>
+                    
+                    ))}
 
             </div>
         </div>

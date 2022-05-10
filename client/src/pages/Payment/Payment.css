@@ -38,3 +38,7 @@
 .paypal-powered-by {
     display: none;
 }
+
+.payment button {
+    display: none;
+}
