@@ -3,6 +3,7 @@ import './Profile.css';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries'
+import Product from "../../component/Product/Product";
 
 
 const Profile = (props) => {
@@ -25,16 +26,19 @@ const Profile = (props) => {
           </div>
 
           {itemsByUser.map((itemsByUser) =>
-           <div>
-            <p><strong>Issue Title:</strong> {itemsByUser.itemIssueTitle}</p>
-            <p><strong>Description:</strong>{itemsByUser.itemDescription}</p>
-            <p><strong>Publisher:</strong>{itemsByUser.itemPublisher}</p>
-            <p><strong>Price:</strong>${itemsByUser.itemPrice}</p>
-            <p><strong>Condition:</strong> {itemsByUser.itemCondition}</p>
-            {/* {<img src={itemsByUser.itemImage}/>} */}
-          </div>
+          <Product id={itemsByUser._id}
+            itemTitle={itemsByUser.itemTitle}
+            itemIssueTitle={itemsByUser.itemIssueTitle}
+            itemDescription ={itemsByUser.itemDescription}
+            itemPublisher = {itemsByUser.itemPublisher}
+            username = {itemsByUser.username}
+            itemPrice = {itemsByUser.itemPrice}
+            itemCondition = {itemsByUser.itemCondition}
+            itemImage = {itemsByUser.itemImage}
+            createdAt = {itemsByUser.createdAt}
+
+          />
           )}
-          
         </div>
       );
 };
