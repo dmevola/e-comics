@@ -1,0 +1,9 @@
+.center {
+    margin: auto;
+    width: 50%;
+  }
+
+.username {
+    color: red;
+    font-weight: bolder;
+}

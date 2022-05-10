@@ -37,3 +37,24 @@ export const QUERY_ME_BASIC = gql`
     }
   }
 `;
+
+
+export const QUERY_USER = gql`
+query ItemsByUser($username: String!) {
+  itemsByUser(username: $username) {
+    itemPublisher
+    itemTitle
+    itemIssueTitle
+    itemDescription
+    itemIssueNumber
+    itemCondition
+    itemPrice
+    itemStatus
+    itemImage
+    createdAt
+    username
+  }
+}
+`;
+=======
+

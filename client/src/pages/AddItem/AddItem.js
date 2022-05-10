@@ -16,11 +16,13 @@ export default function AddItem() {
     const [formState, setFormState] = useState({ itemPublisher: "", itemTitle: '', itemIssueTitle: '', itemIssueNumber: '', itemDescription: '', itemCondition: '', itemPrice: '', itemImage: 'https://res.cloudinary.com/codezilla2022/image/upload/v1651705771/default_ulb9oh.jpg', username: username, });
     const [addItem, { error }] = useMutation(ADD_ITEM)
     const { data, loading, errors } = useQuery(QUERY_ITEMS);
+
     const [btn, setBtn] = useState(true)
 
     console.log(data, username)
 
     const noImage = () => {
+
         setBtn(false)
 
     }

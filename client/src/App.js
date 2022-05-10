@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Checkout from "./pages/Checkout/Checkout";
 import Payment from "./pages/Payment/Payment";
 import AddItem from "./pages/AddItem/AddItem";
+import Profile from "./pages/Profile/Profile";
 
 const httplink = createHttpLink({
   uri: 'http://localhost:3003/graphql'
@@ -38,18 +39,22 @@ function App() {
       
       <Routes>
 
+
+
           <Route path="/checkout" element={localStorage.getItem('id_token')? <><Checkout/></> : <><Login/></>}/>  
           <Route path="/payment" element={localStorage.getItem('id_token')? <><Payment/></> : <><Login/></>}/> 
           <Route path="/home" element={<><Header/><Home/></>}/>
           <Route path="/addItem" element={localStorage.getItem('id_token')? <><AddItem/></> : <><Login/></>}/>
           <Route path="/signup" element={<><SignUp/></>}/>
           <Route path="/login" element={<><Login/></>}/>
+          <Route path="/profile/:username" element={<><Header/><Profile/></>}/>
           <Route path="*" element={<><Header/><Home/></>}/>     
         </Routes>
     </div>
   </Router>
   </ApolloProvider>
 );
+
 }
 
 export default App;

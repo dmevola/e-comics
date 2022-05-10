@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 import './CommicList.css'
@@ -7,11 +8,13 @@ import Product from '../Product/Product';
 
 const ComicList = ({ items, title }) => {
  
+
   return (
     <div>
       <h3>{title}</h3>
       {items && 
       items.map(item => (
+
       <div className="product" key={item._id}>
        
          
@@ -27,11 +30,12 @@ const ComicList = ({ items, title }) => {
             createdAt = {item.createdAt}
 
           />
+
       </div>
 
       ))}
           </div>
   )};
 
+export default ComicList;
 
-  export default ComicList;

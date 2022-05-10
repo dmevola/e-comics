@@ -13,6 +13,7 @@ function Home() {
 
     return (
 
+
         <main>
         <div className="home">
             <div className="home__container">
@@ -22,6 +23,8 @@ function Home() {
                     <ComicList items={items} title="What's your issue?"/>
                 )}
         
+
+
 
             </div>
         </div>
