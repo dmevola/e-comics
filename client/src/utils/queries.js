@@ -39,18 +39,19 @@ export const QUERY_ME_BASIC = gql`
 `;
 
 export const QUERY_USER = gql`
-query items($username: String!) {
-  items(username: $username) {
+query ItemsByUser($username: String!) {
+  itemsByUser(username: $username) {
     itemPublisher
     itemTitle
     itemIssueTitle
-    itemIssueNumber
     itemDescription
+    itemIssueNumber
     itemCondition
     itemPrice
     itemStatus
     itemImage
     createdAt
+    username
   }
 }
 `;

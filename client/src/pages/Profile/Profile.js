@@ -12,25 +12,30 @@ const Profile = (props) => {
       variables: { username: userParam },
     });
     
-    const item = data?.item || {};
-    
+    const itemsByUser = data?.itemsByUser || {};
+
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+              
     return (
         <div>
           <div className="center">
             <h2>Welcome to the profile of <span class="username">{userParam}</span>. A true believer!</h2>
           </div>
-    
-           <div>
-            <p><strong>Issue Title:</strong> {item.itemIssueTitle}</p>
-            <p><strong>Description:</strong>{item.itemDescription}</p>
-            <p><strong>Publisher:</strong>{item.itemPublisher}</p>
-            <p><strong>Price:</strong>${item.itemPrice}</p>
-            <p><strong>Condition:</strong> {item.itemCondition}</p>
-            {/* <img src={item.itemImage}/> */}
-          </div>
-      </div>
 
-         
+          {itemsByUser.map((itemsByUser) =>
+           <div>
+            <p><strong>Issue Title:</strong> {itemsByUser.itemIssueTitle}</p>
+            <p><strong>Description:</strong>{itemsByUser.itemDescription}</p>
+            <p><strong>Publisher:</strong>{itemsByUser.itemPublisher}</p>
+            <p><strong>Price:</strong>${itemsByUser.itemPrice}</p>
+            <p><strong>Condition:</strong> {itemsByUser.itemCondition}</p>
+            {/* {<img src={itemsByUser.itemImage}/>} */}
+          </div>
+          )}
+          
+        </div>
       );
 };
     
