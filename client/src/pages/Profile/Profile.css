@@ -1,0 +1,12 @@
+.profile-message {
+    margin: auto;
+    width: 35%;
+    padding-top: 75px;
+    font-weight: bold;
+
+  }
+
+.username {
+    color: red;
+    font-weight:900;
+}

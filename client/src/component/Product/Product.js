@@ -4,6 +4,7 @@ import './Product.css'
 import { useStateValue } from '../../StateProvider'
 import Auth from '../../utils/auth';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom'
 
 export default function Product({id,itemIssueTitle,itemDescription,itemPublisher,username,itemPrice,itemCondition,itemImage,createdAt,itemTitle}) {
     const [{basket},dispatch] = useStateValue();
@@ -39,7 +40,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
             <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
             <p><strong>Description:</strong>{itemDescription}</p>
             <p><strong>Publisher:</strong>{itemPublisher}</p>
-            <p><strong>Seller:</strong>{username}</p>
+            <p><strong>Seller:</strong><Link to={`/profile/${username}`}>{username}</Link></p>
             <p><strong>Price:</strong>${itemPrice}</p>
             <p><strong>Condition:</strong> {itemCondition}</p>
             <img src={itemImage}/>
