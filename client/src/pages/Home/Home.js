@@ -14,13 +14,14 @@ function Home() {
     return (
 
 
-        <main>
-        <div className="home">
-            <div className="home__container">
+        <main className='bg-blue-400'>
+        <div className="home ">
+            <div className="home__container shadow-none outline-none flex justify-evenly">
+
                 {loading ? (
                     <div> Loading some comics...</div>
                 ) : (
-                    <ComicList items={items} title="What's your issue?"/>
+                    <ComicList items={items} className='shadow-none outline-none flex justify-evenly'/>
                 )}
         
 

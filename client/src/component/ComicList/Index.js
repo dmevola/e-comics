@@ -10,12 +10,12 @@ const ComicList = ({ items, title }) => {
  
 
   return (
-    <div>
-      <h3>{title}</h3>
+    <div className='w-full pt-16 md:pt-5 pb-0 items-center h-full grid md:grid-cols-2 xl:grid-cols-3 mx-2 row-start-auto shadow-none outline-none bg-blue-400'>
       {items && 
       items.map(item => (
 
-      <div className="product" key={item._id}>
+      <div className="product md:px-2 px-4 py-0 mb-0 max-w-[1300px] justify-center bg-blue-400 shadow-none outline-none border-0" key={item._id}>
+
        
          
           <Product id={item._id}
@@ -28,13 +28,13 @@ const ComicList = ({ items, title }) => {
             itemCondition = {item.itemCondition}
             itemImage = {item.itemImage}
             createdAt = {item.createdAt}
-
+            
           />
 
       </div>
 
       ))}
-          </div>
+    </div>
   )};
 
 export default ComicList;

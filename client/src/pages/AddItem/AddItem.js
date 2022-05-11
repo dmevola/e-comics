@@ -73,7 +73,6 @@ export default function AddItem() {
     };
 
     // submit form
-    // submit form (notice the async!)
     const handleFormSubmit = async event => {
         event.preventDefault();
         console.log("handel")
@@ -94,96 +93,87 @@ export default function AddItem() {
         }
         // window.location.reload();
     };
-    return ( <
-        div className = "addItem" >
-        <
-        div className = "addItem__container" >
-        <
-        form onSubmit = {
-            (e) => { e.preventDefault(); } } >
-        <
-        input placeholder = "itemPublisher"
-        name = "itemPublisher"
-        type = "itemPublisher"
-        id = "itemPublisher"
-        value = { formState.itemPublisher }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemTitle"
-        name = "itemTitle"
-        type = "itemTitle"
-        id = "itemTitle"
-        value = { formState.itemTitle }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemIssueTitle"
-        name = "itemIssueTitle"
-        type = "itemIssueTitle"
-        id = "itemIssueTitle"
-        value = { formState.itemIssueTitle }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemIssueNumber"
-        name = "itemIssueNumber"
-        type = "itemIssueNumber"
-        id = "itemIssueNumber"
-        value = { formState.itemIssueNumber }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemDescription"
-        name = "itemDescription"
-        type = "itemDescription"
-        id = "itemDescription"
-        value = { formState.itemDescription }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemCondition"
-        name = "itemCondition"
-        type = "itemCondition"
-        id = "itemCondition"
-        value = { formState.itemCondition }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input placeholder = "itemPrice"
-        name = "itemPrice"
-        type = "itemPrice"
-        id = "itemPrice"
-        value = { formState.itemPrice }
-        onChange = { handleChange }
-        className = "addItem__input" /
-        >
-        <
-        input name = "itemImage"
-        type = "file"
-        value = { formState.image }
-        onChange = { uploadImage }
-        className = "addItem__input" /
-        >
-        <
-        button onClick = { noImage } > No image < /button>
+    return ( 
+        <div className = "addItem my-0 bg-red-400 flex items-center justify-center" >
+            <div className = "addItem__container h-[430px] py-0 flex bg-blue-300 justify-center items-center rounded-lg" >
+                
+                <form onSubmit = {
+                    (e) => { e.preventDefault(); } }
+                    className='flex-col flex items-center h-[425px]' >
+                    
+                    <h5 className='mt-0 mb-4 text-lg'>Comic Information</h5>
 
+                    <input placeholder = "itemPublisher"
+                    name = "itemPublisher"
+                    type = "itemPublisher"
+                    id = "itemPublisher"
+                    value = { formState.itemPublisher }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1" 
+                    />
+                    <input placeholder = "itemTitle"
+                    name = "itemTitle"
+                    type = "itemTitle"
+                    id = "itemTitle"
+                    value = { formState.itemTitle }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1" 
+                    />
+                    <input placeholder = "itemIssueTitle"
+                    name = "itemIssueTitle"
+                    type = "itemIssueTitle"
+                    id = "itemIssueTitle"
+                    value = { formState.itemIssueTitle }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1" 
+                    />
+                    <input placeholder = "itemIssueNumber"
+                    name = "itemIssueNumber"
+                    type = "itemIssueNumber"
+                    id = "itemIssueNumber"
+                    value = { formState.itemIssueNumber }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1" 
+                    />
+                    <input placeholder = "itemDescription"
+                    name = "itemDescription"
+                    type = "itemDescription"
+                    id = "itemDescription"
+                    value = { formState.itemDescription }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1"
+                    />
+                    <input placeholder = "itemCondition"
+                    name = "itemCondition"
+                    type = "itemCondition"
+                    id = "itemCondition"
+                    value = { formState.itemCondition }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1" 
+                    />
+                    <input placeholder = "itemPrice"
+                    name = "itemPrice"
+                    type = "itemPrice"
+                    id = "itemPrice"
+                    value = { formState.itemPrice }
+                    onChange = { handleChange }
+                    className = "addItem__input rounded py-1 mb-3 text-center border-0 outline outline-1"
+                    />
+                    <input name = "itemImage"
+                    type = "file"
+                    value = { formState.image }
+                    onChange = { uploadImage }
+                    className = "addItem__input" 
+                    />
+                    
+                    <button onClick = { noImage } className='mb-5 px-2 py-0.5 text-gray-800 bg-gray-100 outline outline-1 border-0 hover:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out items-center sm:px-3'> No image </button>
 
-        <
-        button disabled = { btn }
-        onClick = { handleFormSubmit } > Submit < /button>
+                    <button disabled = { btn }
+                    onClick = { handleFormSubmit } className='px-3 py-2 font-bold text-gray-800 bg-yellow-200 uppercase rounded-md shadow-md hover:bg-orange-300 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out items-center sm:px-3'> Submit </button>
 
-        <
-        /form> { /* {data.map(item=>(<div>{item}</div>))} */ } <
-        /div>
+                </form> { /* {data.map(item=>(<div>{item}</div>))} */ } 
+            </div>
 
-        <
-        /div>
+        </div>
     )
-}
+};

@@ -11,53 +11,52 @@ export default function Payment() {
     const[{basket,user},dispatch] = useStateValue();
     
   return (
-    <div className="payment">
+    <div className="payment flex-col m-0 p-0 bg-purple-300">
         
-        <div className="payment__container">
-            <h1>
-                Checkout(<Link to="/checkout">{basket?.length} items</Link>)
+        <div className="payment__container justify-center">
+            <h1 className='bg-purple-300 font-bold'>
+                Checkout(<Link to="/checkout" className='font-normal'>{basket?.length} items</Link>)
             </h1>
-            <div className="payment__section">
-                <h2>TOTAL : {getBasketTotal(basket)}</h2>
+
+            <div className="payment__section justify-center pt-0">
+                <h2 className='bg-green-200 rounded p-2 px-4'>TOTAL : {getBasketTotal(basket)}</h2>
             </div>
-            <div className="payment__section">
-                <div className="paument__title">
-                        <h3>Review items and delivery</h3>
-                </div>
-                <div className="payment__items">
-                    <br></br>
-                    <br></br>
-                    {basket.map(item=>(
-                        <div className="prodct">
-                            <Product id={item.id}
-                            itemIssueTitle={item.itemIssueTitle}
-                            itemDescription ={item.itemDescription}
-                            itemPublisher = {item.itemPublisher}
-                            username = {item.username}
-                            itemPrice = {item.itemPrice}
-                            itemCondition = {item.itemCondition}
-                            itemImage = {item.itemImage}
-                            createdAt = {item.createdAt}
-                      />
-                      </div>
+
+            <div className="paypal__container flex justify-center items-center my-6">
+                <PayPalScriptProvider options={{ "client-id": "test" }} className='justify-center'>
+                    <PayPalButtons style={{ layout: "vertical" }} className='justify-center'/>
+                </PayPalScriptProvider>
+            </div>
+
+            <div className="payment__items grid md:grid-cols-2 xl:grid-cols-3">
+    
+                {basket.map(item=>(
+                    <div className="prodct h-[1000px] mx-2 rounded-lg shadow-none outline-none">
+                        <Product id={item.id}
+                        itemIssueTitle={item.itemIssueTitle}
+                        itemDescription ={item.itemDescription}
+                        itemPublisher = {item.itemPublisher}
+                        username = {item.username}
+                        itemPrice = {item.itemPrice}
+                        itemCondition = {item.itemCondition}
+                        itemImage = {item.itemImage}
+                        createdAt = {item.createdAt}
+                    />
+                    </div>
                 ))}
-                </div>
             </div>
+            
+            
             <div className="payment__section">
-                <div className="paument__title">
+                <div className="payment__title">
                 
                 </div>
                 <div className="payment__details">
                      
                 </div>
             </div>
-         </div>
-         <div className="paypal__contrainer">
-
-            <PayPalScriptProvider options={{ "client-id": "test" }}>
-                <PayPalButtons style={{ layout: "vertical" }} />
-            </PayPalScriptProvider>
         </div>
+        
 
        
 

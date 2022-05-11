@@ -34,7 +34,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
     }
 
   return (
-    <div className="product">
+    <div className="product h-[975px] py-0 m-0 rounded-lg shadow-none outline-none bg-white">
         <div>
             <p><strong>Title:</strong>{itemTitle}</p>
             <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
@@ -47,7 +47,7 @@ export default function Product({id,itemIssueTitle,itemDescription,itemPublisher
             <br></br>
             created at :  {createdAt}
             <br></br>
-            <button className="addTOBasket bg-green-300" onClick={addToBasket} >Add to basket</button>
+            <button className="addTOBasket bg-green-300 mt-2 p-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[100px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1" onClick={addToBasket} >Add to basket</button>
         </div>
     
     </div>

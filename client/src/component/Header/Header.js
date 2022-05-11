@@ -19,7 +19,7 @@ export default function Header() {
         Auth.logout();
       };
     return (
-        <div className="header bg-blue-400 fixed w-full h-[80px] flex justify-between items-center md:justify-around">
+        <div className="header bg-blue-400 fixed w-full h-[120px] md:h-[80px] flex justify-between items-center md:justify-around">
            <Link underline="none" to="/">
                 <h4 className="header__logo text-2xl text-yellow-300 hover:text-red-300 md:justify-center" alt="">E-comic</h4>
            </Link>
@@ -32,17 +32,17 @@ export default function Header() {
                 {username}
                  
             </div>
-            <div className="header__nav flex items-center">
+            <div className="header__nav flex items-center ">
 
                 <Link  to={!Auth.loggedIn() && '/login'}>
 
-                    <div className="header__option md:flex-row">
+                    <div className="header__option md:flex-row md:pt-0">
                     {Auth.loggedIn() ? (
                     <>
-                    <Link className='bg-yellow-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1' to={"/addItem"}>
+                    <Link className='bg-yellow-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] transition duration-150 ease-in-out hover:outline hover:outline-1' to={"/addItem"}>
                         Add Item
                     </Link>
-                    <Link className='bg-blue-200 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1' to='/profile'>
+                    <Link className='bg-orange-300 my-1 pb-1 px-1 rounded leading-tight shadow-md flex justify-center items-center text-gray-700 md:w-[72px] md:mx-3 transition duration-150 ease-in-out hover:outline hover:outline-1' to='/profile'>
                         
                         Profile
                     </Link>
@@ -79,7 +79,7 @@ export default function Header() {
                     {localStorage.getItem('id_token') ?
                     <Link to="/checkout">
                         
-                        <ShoppingBasketIcon className="ShoppingBasketIcon text-gray-800"/>  
+                        <ShoppingBasketIcon className="ShoppingBasketIcon text-gray-800 hover:text-purple-500"/>  
                     </Link>
                     : <Link to="/login">
                         

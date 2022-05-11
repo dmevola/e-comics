@@ -19,7 +19,7 @@ Built with a React front end, the app uses MongoDB and Mongoose ODM for the data
 
 Download the files from git: https://github.com/dmevola/e-comics/archive/refs/heads/main.zip
 
-Once you have them on your server, be sure to install the NODE.js packages (dependencies) with the command: npm i 
+Once you have them on your server, be sure to install the NODE.js packages (dependencies) with the command: npm i
 
 Package/Dependency installation will need to occur in both the SERVER directory and within the CLIENT directory.
 
@@ -67,7 +67,7 @@ Fork the repo, make changes, and submit a pull request.  All feedback, suggestio
 
 
 ## Credits
-AJ Ureel, Nima Memarzadeh, Griffin Cody, Nick Bentivolio, Dan Evola
+AJ Ureel, Nima Memarzadeh, Cody Griffin, Nick Bentivolio, Dan Evola
 
 [Thanks to our bootcamp instructors and mentors](https://bootcamp.msu.edu/coding/landing/?s=Google-Brand_RFull_&pkw=%2Bmsu%20%2Bdeveloper%20%2Bbootcamp&pcrid=534009557673&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=GGL%7CMICHIGAN-STATE-UNIVERSITY%7CSEM%7CCODING%7C-%7COFL%7C_RFull_%7CALL%7CBRD%7CBMM%7CEmployment%7CBootcamp&utm_term=%2Bmsu%20%2Bdeveloper%20%2Bbootcamp&s=google&k=%2Bmsu%20%2Bdeveloper%20%2Bbootcamp&utm_adgroupid=116234539132&utm_locationphysicalms=9016883&utm_matchtype=b&utm_network=g&utm_device=c&utm_content=534009557673&utm_placement=&gclid=CjwKCAjw9-KTBhBcEiwAr19ig-Xc-FH7H0xxfG5dMim4bFNlZk7c3FgftPUDGfGQpnz2SMqqbwYf7hoCOKMQAvD_BwE&gclsrc=aw.ds)
 
