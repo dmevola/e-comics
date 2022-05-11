@@ -15,7 +15,7 @@ export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,item
   
 
     return (
-        <div className="checkoutProduckt">
+        <div className="checkoutProduct">
             <div>
             <p><strong>Title: </strong>{itemTitle}</p>
             <p><strong>Issue Title:</strong> {itemIssueTitle}</p>
@@ -28,7 +28,7 @@ export default function CheckoutProduckt({id,itemIssueTitle,itemDescription,item
             <br></br>
             created at :  {createdAt}
             <br></br>
-            <button className="bg-red removebtn" onClick={removeFromBasket}>Remove from Basket</button>
+            <button className="removebtn mt-2 p-1.5 font-bold text-gray-800 bg-red-400 leading-tight uppercase rounded shadow-md hover:bg-rose-300 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out items-center sm:px-3" onClick={removeFromBasket}>Remove from Basket</button>
         </div>
         </div>
     )
