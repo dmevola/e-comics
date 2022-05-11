@@ -18,7 +18,7 @@ export default function Payment() {
                 Checkout(<Link to="/checkout" className='font-normal'>{basket?.length} items</Link>)
             </h1>
 
-            <div className="payment__section justify-center">
+            <div className="payment__section justify-center pt-0">
                 <h2 className='bg-green-200 rounded p-2 px-4'>TOTAL : {getBasketTotal(basket)}</h2>
             </div>
 
